@@ -47,7 +47,7 @@ jobs:
         run:
           bandit -r . || true
 
-            - name: Run Bandit (SARIF)
+      - name: Run Bandit (SARIF)
         run: |
           bandit -r . -f json -o bandit.json || true 
       
