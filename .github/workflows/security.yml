@@ -43,7 +43,11 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
 
-      - name: Run Bandit
+      - name: Run Bandit (debug)
+        run:
+          bandit -r . || true
+                
+      - name: Run Bandit (SARIF)
         run: |
           bandit -r . -f json -o bandit.json || true 
       - name: Convert Bandit JSON to SARIF
