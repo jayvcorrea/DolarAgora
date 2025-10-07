@@ -34,6 +34,7 @@ jobs:
         with:
           scan-type: 'fs'
           scan-ref: '.'
+          format: 'sarif'
           limit-serverities-for-sarif: false
           output: 'trivy-results.sarif'
 
